@@ -3,10 +3,7 @@ import Image from "next/image";
 function TextArea({ question = "Adicione suas anotações aqui" }) {
   return (
     <div className="mt-4">
-      <label
-        htmlFor="comment"
-        className="block text-sm font-medium leading-6 text-gray-900"
-      >
+      <label htmlFor="comment" className="block text-sm font-medium leading-6">
         {question}
       </label>
       <div className="mt-2">
@@ -14,7 +11,7 @@ function TextArea({ question = "Adicione suas anotações aqui" }) {
           rows={4}
           name="comment"
           id="comment"
-          className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+          className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
           defaultValue={""}
           placeholder={question}
         />
@@ -26,7 +23,7 @@ function TextArea({ question = "Adicione suas anotações aqui" }) {
 function Exercise({ name, children }) {
   return (
     <div className="">
-      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+      <h2 className="text-2xl font-bold leading-7 sm:truncate sm:text-3xl sm:tracking-tight">
         Exercício: {name}
       </h2>
       {children}
@@ -47,7 +44,7 @@ function Divider() {
 function Chapter({ name, children }) {
   return (
     <div className="">
-      <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">
+      <h2 className="text-2xl font-bold leading-7 sm:truncate sm:text-3xl sm:tracking-tight">
         {name}
       </h2>
       {children}
