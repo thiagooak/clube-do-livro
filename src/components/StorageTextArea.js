@@ -8,7 +8,10 @@ export default function StorageTextArea({ storageKey, question }) {
   }
 
   const [text, setText] = useState(
-    () => window.localStorage.getItem(storageKey) || ""
+    () =>
+      (typeof window !== "undefined" &&
+        window.localStorage.getItem(storageKey)) ||
+      ""
   );
 
   function handleChange(event) {
@@ -17,7 +20,7 @@ export default function StorageTextArea({ storageKey, question }) {
 
   useEffect(() => {
     window.localStorage.setItem(storageKey, text);
-  }, [text]);
+  }, [storageKey, text]);
 
   return (
     <div className="mt-4">
