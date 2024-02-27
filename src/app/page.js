@@ -68,7 +68,7 @@ function ChapterQuote({ author, children }) {
 }
 
 function QuoteContainer({ children }) {
-  return <div className="flex space-x-3">{children}</div>;
+  return <div className="md:flex md:space-x-3">{children}</div>;
 }
 
 function Quote({ author, children, variant = "primary" }) {
