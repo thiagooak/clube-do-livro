@@ -1,24 +1,5 @@
 import Image from "next/image";
-
-function TextArea({ question = "Adicione suas anotações aqui" }) {
-  return (
-    <div className="mt-4">
-      <label htmlFor="comment" className="block text-sm font-medium leading-6">
-        {question}
-      </label>
-      <div className="mt-2">
-        <textarea
-          rows={4}
-          name="comment"
-          id="comment"
-          className="block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-          defaultValue={""}
-          placeholder={question}
-        />
-      </div>
-    </div>
-  );
-}
+import StorageTextArea from "../components/StorageTextArea";
 
 function Exercise({ name, children }) {
   return (
@@ -48,7 +29,10 @@ function Chapter({ name, children }) {
         {name}
       </h2>
       {children}
-      <TextArea></TextArea>
+      <StorageTextArea
+        storageKey={name}
+        question="Adicione suas anotações aqui"
+      ></StorageTextArea>
     </div>
   );
 }
@@ -94,6 +78,7 @@ export default function Home() {
           width={100}
           height={100}
           className="mb-8"
+          alt="Capa de Livro com fundo vermelho, nome do autor Timothy Keller e título: Como Integrar Fé e Trabalho"
         />
         <Chapter name="1. O design do trabalho">
           <ChapterQuote author="Gênesis 2.1-3,15">
@@ -118,6 +103,7 @@ export default function Home() {
                 height={400}
                 style={{ objectFit: "cover" }}
                 className="px-4 py-3 mr-2"
+                alt="Uma balança antiga"
               />
               <Quote author="(p41)" variant="secondary">
                 “Muitas pessoas cometem o erro de achar que o trabalho é uma
@@ -148,6 +134,7 @@ export default function Home() {
               height={400}
               style={{ objectFit: "cover" }}
               className="px-4 py-3 mr-2"
+              alt="5 trabalhadores em uma mina empurrando carros de carga em um trilho"
             />
 
             <div>
@@ -169,11 +156,11 @@ export default function Home() {
         </Chapter>
         <Divider />
         <Exercise name={"Definindo trabalho"}>
-          <TextArea question="Como você define “Trabalho”?" />
+          <StorageTextArea question="Como você define “Trabalho”?" />
 
-          <TextArea question="Quais as caracteristicas de um trabalho significativo/relevante?" />
+          <StorageTextArea question="Quais as caracteristicas de um trabalho significativo/relevante?" />
 
-          <TextArea question="Você acha que o seu trabalho hoje é significativo/revelante? Por quê?" />
+          <StorageTextArea question="Você acha que o seu trabalho hoje é significativo/revelante? Por quê?" />
         </Exercise>
       </div>
     </div>
