@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 
-const pathname = window.location.pathname;
+const pathname = typeof window !== "undefined" ? window.location.pathname : undefined;
 const steps = [
   { name: "Encontro 1", href: "/fe-e-trabalho/1-2", status: pathname == "/fe-e-trabalho/1-2" ? "current" : "upcoming" },
   { name: "Encontro 2", href: "/fe-e-trabalho/3-4", status: pathname == "/fe-e-trabalho/3-4" ? "current" : "upcoming" },
