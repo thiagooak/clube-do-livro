@@ -8,8 +8,26 @@ import {
   Divider,
   Exercise,
 } from "@/components/Interface";
+import { isMeetingEnabled, getNextMeeting } from "@/util";
+
+function NotYet() {
+  const [key] = getNextMeeting();
+  return (
+    <div>
+      Ainda não chegamos aqui! Na nossa próxima reunião vamos discutir o
+      material disponível{" "}
+      <a className="underline" href={`/fe-e-trabalho/${key}`}>
+        nesta página
+      </a>
+    </div>
+  );
+}
 
 export function One() {
+  if (!isMeetingEnabled("1-2")) {
+    return <NotYet></NotYet>;
+  }
+
   return (
     <>
       <Chapter name="1. O design do trabalho">
@@ -99,6 +117,10 @@ export function One() {
 }
 
 export function Two() {
+  if (!isMeetingEnabled("3-4")) {
+    return <NotYet></NotYet>;
+  }
+
   return (
     <>
       <Chapter name="3. O trabalho como cultivo">
@@ -170,6 +192,9 @@ export function Two() {
 }
 
 export function Three() {
+  if (!isMeetingEnabled("5-6")) {
+    return <NotYet></NotYet>;
+  }
   return (
     <>
       <Chapter name="5. O trabalho como cultivo">
@@ -241,6 +266,9 @@ export function Three() {
 }
 
 export function Four() {
+  if (!isMeetingEnabled("7-8")) {
+    return <NotYet></NotYet>;
+  }
   return (
     <>
       <Chapter name="7. O trabalho como cultivo">
@@ -312,6 +340,9 @@ export function Four() {
 }
 
 export function Five() {
+  if (!isMeetingEnabled("9-10")) {
+    return <NotYet></NotYet>;
+  }
   return (
     <>
       <Chapter name="9. O trabalho como cultivo">
@@ -383,6 +414,9 @@ export function Five() {
 }
 
 export function Six() {
+  if (!isMeetingEnabled("11-12")) {
+    return <NotYet></NotYet>;
+  }
   return (
     <>
       <Chapter name="11. O trabalho como cultivo">

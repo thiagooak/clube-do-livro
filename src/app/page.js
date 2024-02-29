@@ -5,8 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      {/* <Screen.One /> */}
-      <Screen.Two />
+      <Screen.One />
     </>
   );
 }
