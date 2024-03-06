@@ -31,16 +31,17 @@ export function One() {
   return (
     <>
       <Chapter name="1. O design do trabalho">
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/wFrxMIHMsFc?si=tmJ1U14aY3tyFBPB&amp;controls=0"
-          title="Gravação da Reunião"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          className="mx-auto my-4"
-        ></iframe>
+        <div className="aspect-video">
+          <iframe
+            width="100%"
+            src="https://www.youtube-nocookie.com/embed/wFrxMIHMsFc?si=tmJ1U14aY3tyFBPB&amp;controls=0"
+            title="Gravação da Reunião"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            className="mx-auto my-4 h-full w-full"
+          ></iframe>
+        </div>
 
         <ChapterQuote author="Gênesis 2.1-3,15">
           Assim foram concluídos os céus e a terra, com todos os seus elementos.
