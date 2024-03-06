@@ -31,6 +31,17 @@ export function One() {
   return (
     <>
       <Chapter name="1. O design do trabalho">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/wFrxMIHMsFc?si=8j4xAKgpanIdG4Bd"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          className="mx-auto my-4"
+        ></iframe>
+
         <ChapterQuote author="Gênesis 2.1-3,15">
           Assim foram concluídos os céus e a terra, com todos os seus elementos.
           No sétmo dia, Deus já havia completado a obra que fizera; nesse dia
@@ -117,9 +128,9 @@ export function One() {
 }
 
 export function Two() {
-  if (!isMeetingEnabled("3-4")) {
-    return <NotYet></NotYet>;
-  }
+  // if (!isMeetingEnabled("3-4")) {
+  //   return <NotYet></NotYet>;
+  // }
 
   return (
     <>
