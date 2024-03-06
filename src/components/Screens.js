@@ -34,8 +34,8 @@ export function One() {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/wFrxMIHMsFc?si=8j4xAKgpanIdG4Bd"
-          title="YouTube video player"
+          src="https://www.youtube-nocookie.com/embed/wFrxMIHMsFc?si=tmJ1U14aY3tyFBPB&amp;controls=0"
+          title="Gravação da Reunião"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
