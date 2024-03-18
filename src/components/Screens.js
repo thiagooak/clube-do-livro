@@ -9,6 +9,7 @@ import {
   Exercise,
 } from "@/components/Interface";
 import { isMeetingEnabled, getNextMeeting } from "@/util";
+import Video from "./Video";
 
 function NotYet() {
   const [key] = getNextMeeting();
@@ -31,17 +32,7 @@ export function One() {
   return (
     <>
       <Chapter name="1. O design do trabalho">
-        <div className="aspect-video">
-          <iframe
-            width="100%"
-            src="https://www.youtube-nocookie.com/embed/wFrxMIHMsFc?si=tmJ1U14aY3tyFBPB&amp;controls=0"
-            title="Gravação da Reunião"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            className="mx-auto my-4 h-full w-full"
-          ></iframe>
-        </div>
+        <Video videoKey="wFrxMIHMsFc" />
 
         <ChapterQuote author="Gênesis 2.1-3,15">
           Assim foram concluídos os céus e a terra, com todos os seus elementos.
@@ -136,6 +127,7 @@ export function Two() {
   return (
     <>
       <Chapter name="3. O trabalho como cultivo">
+        <Video videoKey="wP4f5xLoYbg" />
         <ChapterQuote author="Gênesis 1.28">
           Então Deus os abençoou e lhes disse: Fruticai e multiplicaivos; enchei
           a terra e sujeitai-a; dominai sobre os peixes do mar, sobre as aves do
@@ -236,75 +228,106 @@ export function Two() {
 }
 
 export function Three() {
-  if (!isMeetingEnabled("5-6")) {
-    return <NotYet></NotYet>;
-  }
   return (
     <>
-      <Chapter name="5. O trabalho como cultivo">
-        <ChapterQuote author="Gênesis 1.28">
-          Então Deus os abençoou e lhes disse: Fruticai e multiplicaivos; enchei
-          a terra e sujeitai-a; dominai sobre os peixes do mar, sobre as aves do
-          céu e sobre todos os animais que rastejam sobre a terra.
+      <Chapter name="5. O trabalho se torna infrutífero">
+        <ChapterQuote author="Gênesis 3.16-19">
+          E disse para a mulher: Multiplicarei grandemente a tua dor na
+          gravidez; com dor darás à luz  lhos; o teu desejo será para o teu
+          marido, e ele te dominará. E disse para o homem: Porque deste ouvidos
+          à voz da tua mulher e comeste da árvore da qual te ordenei: Não
+          comerás dela; maldita é a terra por tua causa; com sofrimento comerás
+          dela todos os dias da tua vida. Ela te produzirá espinhos e ervas
+          daninhas; e terás de comer das plantas do campo. Do suor do teu rosto
+          comerás o teu pão, até que tornes à terra, pois dela foste tirado;
+          porque és pó, e ao pó tornarás.
         </ChapterQuote>
         <QuoteContainer>
-          <Quote author="Lorem Ipsum">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            a elit tellus. Morbi semper placerat sapien, mattis dapibus diam
-            pulvinar ac. Ut et ornare sapien.
-          </Quote>
-
           <div>
             <Image
-              src="/piret-ilver-98MbUldcDJY-unsplash.jpg"
+              src="/joshua-woroniecki--L9Ek3MS_rc-unsplash.jpg"
               width={400}
               height={400}
               style={{ objectFit: "cover" }}
               className="px-4 py-3 mr-2"
-              alt="Uma balança antiga"
+              alt="Um deserto"
             />
-            <Quote author="(p00)" variant="secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse a elit tellus. Morbi semper placerat sapien, mattis
-              dapibus diam pulvinar ac. Ut et ornare sapien.
+            <Quote author="(p87)">
+              Apenas se tivermos algum entendimento sobre como o pecado distorce
+              o trabalho é que teremos esperança de combater seus efeitos e
+              recuperar um pouco da satisfação que Deus planejou para ele
+            </Quote>
+          </div>
+          <div>
+            <Quote author="(p97)" variant="secondary">
+              O idealismo afirma: "Por intermédio do meu trabalho, mudarei as
+              coisas, farei diferença, realizarei algo novo, fatei justiça no
+              mundo". O ceticismo afirma: "Nada muda de verdade. Não se encha de
+              esperança. Trabalhe para se sustentar. Não se envolva demais. Tire
+              o máximo proveito que puder."
+            </Quote>
+            <Quote author="(p97)" variant="secondary">
+              O trabalho será tanto frustrante quanto grafiticante, mas às
+              vezes, ele nos oferece um vislumbre da beleza e genialidade
+              extraordinárias que poderiam ter sido características comuns de
+              todas as nossas tarefas e que, pela graça de Deus voltarão a ser
+              no céu e na nova terra.
             </Quote>
           </div>
         </QuoteContainer>
       </Chapter>
       <Divider />
-      <Chapter name="6. O trabalho como serviço">
-        <ChapterQuote author={"Gênesis 1.26,27"}>
-          Somente viva cada um como o Senhor lhe determinou, cada um como Deus o
-          chamou. É isso que ordeno em todas as igrejas.
+      <Chapter name="6. O trabalho perde o sentido">
+        <ChapterQuote author={"Eclesiastes 2.17"}>
+          Por isso, detestei a vida, pois tudo o que se faz debaixo do sol é
+          cansativo para mim. Tudo é ilusão, é perseguir o vento.
         </ChapterQuote>
 
         <QuoteContainer>
           <Image
-            src="/peter-burdon-FmUgZxCIJhc-unsplash.jpg"
+            src="/claudio-schwarz-sjKicQLvFB8-unsplash.jpg"
             width={400}
             height={400}
             style={{ objectFit: "cover" }}
             className="px-4 py-3 mr-2"
-            alt="5 trabalhadores em uma mina empurrando carros de carga em um trilho"
+            alt="Uma escada"
           />
 
           <div>
-            <Quote author="(p00)">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse a elit tellus. Morbi semper placerat sapien, mattis
-              dapibus diam pulvinar ac. Ut et ornare sapien.
+            <Quote author="(p102)">
+              Se basearmos nossa vida no trabalho e nas realizações, no amor e
+              prazeres ou no conhecimento e aprendizado, nosso viver se torna
+              ansioso e frágil
             </Quote>
 
-            <Quote author="(p00)" variant="secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse a elit tellus. Morbi semper placerat sapien, mattis
-              dapibus diam pulvinar ac. Ut et ornare sapien.
+            <Quote author="(p105)" variant="secondary">
+              Outro motivo de o trabalho nos parecer tão alienante é a injustiça
+              e a despersonalização sempre presentes em todos os sitemas sociais
+              e que tantas vezes influenciam a natureza da tarefa que realizamos
+            </Quote>
+            <Quote author="(p107)" variant="secondary">
+              O trabalho pode nos convencer de que estamos batalhando por nossos
+              familiares e amigos enquanto somos seduzidos pela ambição a
+              negligenciá-los
             </Quote>
           </div>
         </QuoteContainer>
       </Chapter>
       <Divider />
-      <Exercise name={"Definindo trabalho"}>TBD</Exercise>
+      <Exercise name={"Definindo trabalho"}>
+        <p>
+          Jesus começou o seu trabalho quando tinha mais ou menos trinta anos de
+          idade. [...] Lucas 3:23
+        </p>
+        <p className="mt-4">
+          Por acaso ele não é o carpinteiro, filho de Maria? [...] Marcos 6:3
+        </p>
+        <p className="mt-4">
+          e acabou ficando ali para trabalhar com eles, porque a profissão de
+          Paulo e a deles era a mesma, isto é, fazer barracas. Atos 18:3
+        </p>
+        {/* <StorageTextArea question="Complete a frase: Quando eu tinha 10 anos de idade eu queria ser ... porque ..." /> */}
+      </Exercise>
     </>
   );
 }
