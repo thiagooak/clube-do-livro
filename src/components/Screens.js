@@ -260,11 +260,11 @@ export function Three() {
           </div>
           <div>
             <Quote author="(p97)" variant="secondary">
-              O idealismo afirma: "Por intermédio do meu trabalho, mudarei as
-              coisas, farei diferença, realizarei algo novo, fatei justiça no
-              mundo". O ceticismo afirma: "Nada muda de verdade. Não se encha de
-              esperança. Trabalhe para se sustentar. Não se envolva demais. Tire
-              o máximo proveito que puder."
+              O idealismo afirma: &quot;Por intermédio do meu trabalho, mudarei
+              as coisas, farei diferença, realizarei algo novo, fatei justiça no
+              mundo&quot;. O ceticismo afirma: &quot;Nada muda de verdade. Não
+              se encha de esperança. Trabalhe para se sustentar. Não se envolva
+              demais. Tire o máximo proveito que puder.&quot;
             </Quote>
             <Quote author="(p97)" variant="secondary">
               O trabalho será tanto frustrante quanto grafiticante, mas às
