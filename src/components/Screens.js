@@ -314,7 +314,7 @@ export function Three() {
         </QuoteContainer>
       </Chapter>
       <Divider />
-      <Exercise name={"Definindo trabalho"}>
+      <Exercise name={"Trabalho na Bíblia"}>
         <p>
           Jesus começou o seu trabalho quando tinha mais ou menos trinta anos de
           idade. [...] Lucas 3:23
